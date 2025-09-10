@@ -9,7 +9,7 @@
       
         <!-- add HTML code here -->
          <input id="userinput" type="text" placeholder="uwu">
-         <button id="submit" onclick="AddList()"> Enter</button>
+         <button id="submit" onclick="AddListAfterClick()"> Enter</button>
 
       <ul>
          <li>Notebook</li>
@@ -21,13 +21,13 @@
       </ul>
       
       <script>
-      function AddList(){
-         var listitem = document.getElementById("userinput");
+      function AddListAfterClick(){
+         var input = document.getElementById("userinput");
          var item = document.createElement("li");
          var unli = document.getElementsByTagName("ul")[0]; // make sure its [0] as elements gets an array
-         if(listitem.value.length >0){
-            var additem = document.createTextNode(listitem.value); // value is important!
-            item.appendChild(additem);
+         if(input.value.length >0){
+            var TextNode = document.createTextNode(input.value); // value is important!
+            item.appendChild(TextNode);
             unli.appendChild(item);
             input.value =""; // clears input
          }
