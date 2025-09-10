@@ -27,7 +27,7 @@
          var unli = document.getElementsByTagName("ul")[0]; // make sure its [0] as elements gets an array
          if(input.value.length >0){
             var TextNode = document.createTextNode(input.value); // value is important!
-            item.appendChild(TextNode);
+            item.appendChild(TextNode); // can instead use li.innerchild(textnode)
             unli.appendChild(item);
             input.value =""; // clears input
          }
