@@ -25,7 +25,7 @@
          var listitem = document.getElementById("userinput");
          var item = document.createElement("li");
          var unli = document.getElementsByTagName("ul")[0]; // make sure its [0] as elements gets an array
-         if(listitem != ""){
+         if(listitem.value.length >0){
             var additem = document.createTextNode(listitem.value); // value is important!
             item.appendChild(additem);
             unli.appendChild(item);
